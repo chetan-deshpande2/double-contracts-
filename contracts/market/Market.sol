@@ -474,19 +474,19 @@ contract Market is OwnableContract, ReentrancyGuardUpgradeable, IMarket {
         maxIndate = max_;
     }
 
-    // function multicall(bytes[] calldata data)
-    //     external
-    //     returns (bytes[] memory results)
-    // {
-    //     results = new bytes[](data.length);
-    //     for (uint256 i = 0; i < data.length; i++) {
-    //         (bool success, bytes memory result) = address(this).delegatecall(
-    //             data[i]
-    //         );
-    //         if (success) {
-    //             results[i] = result;
-    //         }
-    //     }
-    //     return results;
-    // }
+    function multicall(bytes[] calldata data)
+        external
+        returns (bytes[] memory results)
+    {
+        results = new bytes[](data.length);
+        for (uint256 i = 0; i < data.length; i++) {
+            (bool success, bytes memory result) = address(this).delegatecall(
+                data[i]
+            );
+            if (success) {
+                results[i] = result;
+            }
+        }
+        return results;
+    }
 }
