@@ -14,21 +14,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 });
 
 module.exports = {
-  solidity: {
-    compilers: [
-      {
-        version: "0.8.4",
-      },
-      {
-        version: "0.8.2",
-      },
-      {
-        version: "0.8.2",
-      },
-    ],
-  },
+  solidity: "0.8.17",
   networks: {
-    goerli: {
+    rinkeby: {
       url: process.env.RPC_URL,
       accounts: [process.env.PRIVATE_KEY],
       gasPrice: 3000000000,
