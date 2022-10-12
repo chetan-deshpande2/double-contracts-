@@ -17,9 +17,9 @@ async function main() {
       "0x35b22c72ca15ca5dc83a58a10df0605c88aec61a",
       "0x35b22c72ca15ca5dc83a58a10df0605c88aec61a",
     ],
-    { initializer: "Initialize" }
+    { initializer: "Initialize", unsafeAllow: ["delegatecall"] }
   );
-  const market = await Market.deployed();
+  const market = await Market.deploy();
 
   console.log("Market address:", market.address);
 }
