@@ -1,0 +1,318 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "txHash": "0x9641dede542b87e936fa8ebbbd1cea0d9270a27e4e9c26595d4b5152789fffbc"
+  },
+  "proxies": [
+    {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "txHash": "0x962d2cc24a4761d9e2b08e95e8d51f1fcf85339c1ac2935b59c46fc925c3844b",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "3a7a4788a99b0eb6b3ca6c87095db0906d83d5268eb6a38eee824b79b33bedae": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "txHash": "0x97dac6b791df5f11d1446342aaa41e94f2bfab676d6b45501ac633b31c275af9",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "owner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "OwnableContract",
+            "src": "contracts/OwnableContract.sol:5"
+          },
+          {
+            "label": "pendingOwner",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "OwnableContract",
+            "src": "contracts/OwnableContract.sol:6"
+          },
+          {
+            "label": "admin",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address",
+            "contract": "OwnableContract",
+            "src": "contracts/OwnableContract.sol:7"
+          },
+          {
+            "label": "_initialized",
+            "offset": 20,
+            "slot": "2",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 21,
+            "slot": "2",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "lendingMap",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(Lending)13206_storage))",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:16"
+          },
+          {
+            "label": "privateOrderMap",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_address))",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:17"
+          },
+          {
+            "label": "paymentNormalMap",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(PaymentNormal)13211_storage))",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:18"
+          },
+          {
+            "label": "royaltyMap",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:20"
+          },
+          {
+            "label": "balanceOfFee",
+            "offset": 0,
+            "slot": "57",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:21"
+          },
+          {
+            "label": "beneficiary",
+            "offset": 0,
+            "slot": "58",
+            "type": "t_address_payable",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:22"
+          },
+          {
+            "label": "fee",
+            "offset": 0,
+            "slot": "59",
+            "type": "t_uint256",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:23"
+          },
+          {
+            "label": "maxIndate",
+            "offset": 0,
+            "slot": "60",
+            "type": "t_uint64",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:24"
+          },
+          {
+            "label": "isPausing",
+            "offset": 8,
+            "slot": "60",
+            "type": "t_bool",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:25"
+          },
+          {
+            "label": "supportERC20",
+            "offset": 9,
+            "slot": "60",
+            "type": "t_bool",
+            "contract": "Market",
+            "src": "contracts/market/Market.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_enum(OrderType)13183": {
+            "label": "enum IMarket.OrderType",
+            "members": [
+              "Public",
+              "Private",
+              "Event_Private"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_enum(PaymentType)13185": {
+            "label": "enum IMarket.PaymentType",
+            "members": [
+              "Normal"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_address))": {
+            "label": "mapping(address => mapping(uint256 => address))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_struct(Lending)13206_storage))": {
+            "label": "mapping(address => mapping(uint256 => struct IMarket.Lending))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_struct(PaymentNormal)13211_storage))": {
+            "label": "mapping(address => mapping(uint256 => struct IMarket.PaymentNormal))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_address)": {
+            "label": "mapping(uint256 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Lending)13206_storage)": {
+            "label": "mapping(uint256 => struct IMarket.Lending)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(PaymentNormal)13211_storage)": {
+            "label": "mapping(uint256 => struct IMarket.PaymentNormal)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Lending)13206_storage": {
+            "label": "struct IMarket.Lending",
+            "members": [
+              {
+                "label": "lender",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "nftId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "maxEndTime",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "minDuration",
+                "type": "t_uint64",
+                "offset": 8,
+                "slot": "3"
+              },
+              {
+                "label": "createTime",
+                "type": "t_uint64",
+                "offset": 16,
+                "slot": "3"
+              },
+              {
+                "label": "nonce",
+                "type": "t_uint64",
+                "offset": 24,
+                "slot": "3"
+              },
+              {
+                "label": "orderType",
+                "type": "t_enum(OrderType)13183",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "paymentType",
+                "type": "t_enum(PaymentType)13185",
+                "offset": 1,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(PaymentNormal)13211_storage": {
+            "label": "struct IMarket.PaymentNormal",
+            "members": [
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "pricePerDay",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,27 +1,28 @@
-const { ethers, s, upgrades } = require("hardhat");
-
-const ownersAddress = "0x35B22c72cA15ca5dC83A58A10Df0605C88aEC61a";
+const { ethers, upgrades } = require("hardhat");
 
 async function main() {
   const [deployer] = await ethers.getSigners();
 
-  console.log("Deploying contracts with the account:", deployer.address);
+  console.log(
+    `Deploying Marketplace contract with the account: ${deployer.address}`
+  );
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
   const Market = await ethers.getContractFactory("Market");
 
-  const v1contracts = await upgrades.deployProxy(
+  const market = await upgrades.deployProxy(
     Market,
     [
-      "0x35b22c72ca15ca5dc83a58a10df0605c88aec61a",
-      "0x35b22c72ca15ca5dc83a58a10df0605c88aec61a",
+      "0x3FeDDA998FF6fA5E1DB0eA440372cDd9cAA063b0",
+      "0x3FeDDA998FF6fA5E1DB0eA440372cDd9cAA063b0",
     ],
-    { initializer: "Initialize", unsafeAllow: ["delegatecall"] }
+    { initializer: "initialize", unsafeAllow: ["delegatecall"] }
   );
-  const market = await Market.deploy();
 
-  console.log("Market address:", market.address);
+  await market.deployed();
+
+  console.log("Marketplace deployed to address:", market.address);
 }
 
 main()
